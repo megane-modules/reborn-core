@@ -1,23 +1,18 @@
 package lol.bai.megane.module.reborncore.provider;
 
 import lol.bai.megane.api.provider.FluidProvider;
+import net.minecraft.fluid.Fluid;
 import org.jetbrains.annotations.Nullable;
 import reborncore.common.blockentity.MachineBaseBlockEntity;
 import reborncore.common.util.Tank;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class MachineBaseFluidProvider extends FluidProvider<MachineBaseBlockEntity> {
 
     private Tank tank;
 
     @Override
-    public void setContext(World world, BlockPos pos, PlayerEntity player, MachineBaseBlockEntity machineBaseBlockEntity) {
-        super.setContext(world, pos, player, machineBaseBlockEntity);
-
-        this.tank = machineBaseBlockEntity.getTank();
+    protected void init() {
+        this.tank = getObject().getTank();
     }
 
     @Override

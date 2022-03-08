@@ -1,8 +1,8 @@
 dependencies {
-    modImplementation meganeModule("api:7.0.0")
-    modRuntimeOnly meganeModule("runtime:7.0.0")
+    modImplementation meganeModule("api:7.1.0")
+    modRuntimeOnly meganeModule("runtime:7.2.0")
     modRuntimeOnly meganeModule("reborn-energy:7.0.0")
-    modRuntimeOnly meganeModule("fabric-transfer:7.0.0")
+    modRuntimeOnly meganeModule("fabric-transfer:7.1.0")
 
-    modImplementation "RebornCore:RebornCore-1.18:5.1.0-beta.5"
+    modImplementation "RebornCore:RebornCore-1.18:5.2.0-beta.2"
 }
